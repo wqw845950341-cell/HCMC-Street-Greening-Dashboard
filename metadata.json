@@ -1,0 +1,5 @@
+{
+  "name": "HCMC Street Greening Dashboard",
+  "description": "A decision-support platform for urban greening in Ho Chi Minh City, featuring interactive maps, 360° before/after comparisons, and policy toolkits.",
+  "requestFramePermissions": []
+}
