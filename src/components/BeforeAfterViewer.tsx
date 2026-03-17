@@ -74,7 +74,7 @@ export default function BeforeAfterViewer({ beforeImg, afterImg, title, onClose 
         <div style={{ padding: '15px 20px', backgroundColor: '#0f172a', display: 'flex', alignItems: 'center', gap: '10px' }}>
           <span style={{ fontSize: '18px' }}>🤖</span>
           <p style={{ margin: 0, color: '#cbd5e1', fontSize: '13px', lineHeight: '1.5' }}>
-            <strong>学术声明 / Technical Disclosure：</strong> 本图像的“改造后 (After)”效果图基于空间数据分析，并使用 <strong>Stable Diffusion 等 AI 图像生成工具</strong> 辅助设计生成，仅作策略可视化演示。
+            <strong>Technical Disclosure:</strong> The "After" visualization of this image is based on spatial data analysis and generated using AI tools such as <strong>Stable Diffusion</strong> to assist in design generation, intended for strategic visualization purposes only.
           </p>
         </div>
 
