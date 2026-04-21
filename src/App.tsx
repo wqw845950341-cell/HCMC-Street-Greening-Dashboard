@@ -16,7 +16,7 @@ import {
   AlertTriangle,
   BarChart3
 } from 'lucide-react';
-import InteractiveMap from './components/InteractiveMap';
+import InteractiveActionMap from './components/InteractiveActionMap';
 import { StrategyToolkit } from './components/StrategyToolkit';
 import { PanoramaViewer } from './components/PanoramaViewer';
 import { StreetSegment } from './data';
@@ -217,7 +217,7 @@ export default function App() {
               >
                 <div className="h-full flex flex-col gap-6">
                   <div className="flex-1 min-h-0">
-                    <InteractiveMap 
+                    <InteractiveActionMap 
                       geoJsonData={EMBEDDED_SCORE_MAP}
                       gradeFilter={gradeFilter}
                       onSelectStreet={(street) => {

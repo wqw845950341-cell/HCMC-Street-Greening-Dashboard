@@ -49,12 +49,26 @@ export default function BeforeAfterViewer({ beforeImg, afterImg, title, onClose 
           style={{ position: 'relative', width: '100%', aspectRatio: '21/9', cursor: 'ew-resize', overflow: 'hidden', backgroundColor: '#000' }}
         >
           {/* 底部图像 (改造后 After) */}
-          <img src={afterImg} alt="After Intervention" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img 
+            src={afterImg} 
+            alt="After Intervention" 
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              const img = e.currentTarget;
+              if (img.src.includes(encodeURIComponent('修改后'))) {
+                img.src = img.src.replace(encodeURIComponent('修改后'), encodeURIComponent('改造后'));
+              } else if (img.src.includes(encodeURIComponent('改造后'))) {
+                img.src = img.src.replace(encodeURIComponent('改造后'), encodeURIComponent('修改后'));
+              }
+            }}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} 
+          />
           
           {/* 顶部图像 (原始图 Before) - 使用 clipPath 实现裁剪揭露效果 */}
           <img 
             src={beforeImg} 
             alt="Original Street View" 
+            referrerPolicy="no-referrer"
             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)` }} 
           />
 
