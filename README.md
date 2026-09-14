@@ -18,9 +18,9 @@ No backend, database, account, or API key is required. The build does not inject
 
 The `.github/workflows/pages.yml` workflow builds and deploys `dist` on every push to `main`, or manually from Actions. Repository Settings → Pages → Source must be **GitHub Actions**.
 
-Intended URL (not live until Pages is enabled): https://wqw845950341-cell.github.io/HCMC-Street-Greening-Dashboard/
+GitHub Pages URL: https://wqw845950341-cell.github.io/HCMC-Street-Greening-Dashboard/
 
-Activation currently requires a public repository or a GitHub plan that supports Pages for private repositories. GitHub returned HTTP 422 when enabling Pages for the current private repository. Repository visibility has not been changed.
+The repository is public and GitHub Pages is enabled with GitHub Actions as the build source. HTTPS is enforced.
 
 Vite uses `base: './'`, and local data/media paths use `import.meta.env.BASE_URL`, supporting the repository subdirectory and a root-level static host. Navigation is client-side view state, without server rewrite requirements. The previous Vercel deployment can continue building the same project.
 
@@ -47,4 +47,5 @@ Vite uses `base: './'`, and local data/media paths use `import.meta.env.BASE_URL
 ## Validation
 
 Run `npm run lint` and `npm run build` before publishing. Browser checks cover both languages, typology/grade filters and empty states, CSV download, comparison dialog, research imagery, and mobile overflow.
+
 
